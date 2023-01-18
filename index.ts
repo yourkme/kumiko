@@ -17,7 +17,12 @@ client.on('messageCreate', async msg => {
 
     let interpreter = new Command(msg);
 
-    console.log(interpreter[]);
+    try {
+        interpreter[msg.content]();
+    } catch (err) {
+        console.log(err);
+    }
+
 });
 
 client.login(Token)
