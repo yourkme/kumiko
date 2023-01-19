@@ -1,0 +1,16 @@
+{
+    "TEXT" : {
+        "default" :
+        {
+            "bot" : {
+                "title" : "kumiko - Open Source Discord bot with discord.js",
+                "url" : "https://github.com/yourkme/kumiko",
+                "description" : "서버를 관리하는 귀여운 아이입니다.",
+                "footer" : 
+                {
+                    "text" : "yourkme's First Typescript Project <3"
+                }
+            }
+        }
+    }
+}

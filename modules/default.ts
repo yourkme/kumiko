@@ -1,8 +1,11 @@
 import { Message, EmbedBuilder } from 'discord.js';
+import { TEXT } from '../config/lang.json'
 
 interface Command {
     [key : string] : any
 }
+
+let lang = TEXT.default;
 
 class Command {
     args : Message;
@@ -10,13 +13,15 @@ class Command {
     constructor(args : Message) {
         this.args = args;
     }
+
+    // Bot Commands
     
     bot = () => {
         let botInformation = new EmbedBuilder()
-            .setTitle("kumiko - Open Source Discord bot with discord.js")
-            .setURL("https://github.com/yourkme/kumiko")
-            .setDescription("서버를 관리하는 귀여운 아이입니다.")
-            .setFooter({text : "yourkme's First Typescript Project <3"});
+            .setTitle(lang.bot.title)
+            .setURL(lang.bot.url)
+            .setDescription(lang.bot.description)
+            .setFooter({text : lang.bot.footer.text});
         
             this.args.channel.send({embeds : [botInformation]});
     }
